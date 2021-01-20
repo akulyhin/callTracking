@@ -19,5 +19,4 @@ const facebookPhones = [
     "+380Facebook"
 ];
 
-
 export { defaultPhones, googlePhones, facebookPhones };
