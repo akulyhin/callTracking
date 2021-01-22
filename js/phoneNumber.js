@@ -5,18 +5,34 @@ const defaultPhones = [
     "+38(050) 123-45-67"
 ];
 
-// Телефоны для Source=google
-const googlePhones = [
+// Пропишите название источники трафика
+const firstSource = 'google';
+
+// Телефоны для firstSource
+const firstPhones = [
     "+380Google",
     "+380Google",
     "+380Google"
     ];
 
-//  Телефоны для source=facebook
-const facebookPhones = [
+
+// Пропишите название источники трафика
+const secondSource = 'facebook';   
+
+//  Телефоны для secondSource
+const secondPhones = [
     "+380Facebook",
     "+380Facebook",
     "+380Facebook"
 ];
 
-export { defaultPhones, googlePhones, facebookPhones };
+// Пропишите название источники трафика
+const thirdSource = '';  
+
+const thirdPhones = [
+    "",
+    "",
+    ""
+]
+
+export { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones};

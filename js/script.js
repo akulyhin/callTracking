@@ -1,4 +1,4 @@
-import { defaultPhones, googlePhones, facebookPhones } from "./phoneNumber.js";
+import { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones } from "./phoneNumber.js";
 
 //Определяем блок по селектору для записи телефонов
 const phoneList = document.querySelector(".phone");
@@ -24,9 +24,7 @@ let utmArr = [];
 // Определяем ютм, разделям их по знаку "&", записываем их раздельно в массив с уменшенным регистром
 if (href.indexOf("?") != -1) {
   search = search.slice(1).toLowerCase();
-  console.log(search);
   utmArr = search.split("&");
-  console.log(utmArr);
 
 // перебираем массив и разбиваем каждый элемент по разделителю "=" и записываем в LocalStorage
   utmArr.map((utm) => {
@@ -35,13 +33,22 @@ if (href.indexOf("?") != -1) {
 }
 
 // определяем по ключу, если utm_source равен нашей строке, то отправляем в функцию необходимый массив телефонов
-if (localStorage.getItem("utm_source") === "google") {
+if (localStorage.getItem("utm_source") === firstSource) {
+  changePhones(firstPhones);
+}
 
-  changePhones(googlePhones);
-} else if (localStorage.getItem("utm_source") === "facebook") {
+if (localStorage.getItem("utm_source") === '') {
+  changePhones(defaultPhones);
+}
 
-  changePhones(facebookPhones);
+else if (localStorage.getItem("utm_source") === secondSource) {
+  changePhones(secondPhones);
+}
 
-} else {
+else if (localStorage.getItem("utm_source") === thirdSource) {
+  changePhones(thirdPhones);
+} 
+
+else {
   changePhones(defaultPhones);
 }
