@@ -14,7 +14,7 @@ function changePhones(phones) {
     selector.innerHTML = '';
     phones.forEach((phone) => {
       const phoneLink = phone.replace(/[() -]/g, '');
-      selector.insertAdjacentHTML("beforeend", `<li><a href="tel:${phoneLink}">${phone}</a></li>`);
+      selector.insertAdjacentHTML("beforeend", `<a href="tel:${phoneLink}">${phone}</a><br>`);
     });
   })
     

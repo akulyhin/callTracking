@@ -1,5 +1,5 @@
 // Селектор места, куда вставить телефон(ны) Например: .phone или #phone
-const selector = '.phone, .phone-1>h2';
+const selector = '.s22';
 
 
 // Телефоны по умолчанию
