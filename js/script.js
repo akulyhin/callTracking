@@ -4,7 +4,9 @@ import { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, th
 const phoneList = document.querySelector(selector);
 
 // функция перебора массива телефонов и вставки в наш блок
+
 function changePhones(phones) {
+  phoneList.innerHTML = '';
   phones.forEach((phone) => {
     const phoneLink = phone.replace(/[() -]/g, '');
     phoneList.insertAdjacentHTML("beforeend", `<li><a href="tel:${phoneLink}">${phone}</a></li>`);
