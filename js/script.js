@@ -4,20 +4,16 @@ import { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, th
 const selectorArr = document.querySelectorAll(selector);
 
 
-  
-
-
-// функция перебора массива телефонов и вставки в наш блок
-
+// функция перебора массива телефонов и селекторов и вставки в наш блок
 function changePhones(phones) {
   selectorArr.forEach(selector => {
     selector.innerHTML = '';
     phones.forEach((phone) => {
+      // Создаем ccылку (tel:phone) и чистим ее от всех пробелов и знаков
       const phoneLink = phone.replace(/[() -]/g, '');
       selector.insertAdjacentHTML("beforeend", `<li><a href="tel:${phoneLink}">${phone}</a></li>`);
     });
-  })
-    
+  }) 
 }
 
 // Переменные с текущей ссылкой и корнем после слеша
