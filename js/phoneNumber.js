@@ -5,6 +5,8 @@ const defaultPhones = [
     "+38(050) 123-45-67"
 ];
 
+// ---- Первый источник ----
+
 // Пропишите название источники трафика
 const firstSource = 'google';
 
@@ -16,6 +18,8 @@ const firstPhones = [
     ];
 
 
+// ---- Второй источник ----
+
 // Пропишите название источники трафика
 const secondSource = 'facebook';   
 
@@ -26,9 +30,13 @@ const secondPhones = [
     "+380Facebook"
 ];
 
+
+// ---- Третий источник ----
+
 // Пропишите название источники трафика
 const thirdSource = '';  
 
+//  Телефоны для thirdSource
 const thirdPhones = [
     "",
     "",
