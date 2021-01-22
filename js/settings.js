@@ -1,3 +1,7 @@
+// Селектор места, куда вставить телефон(ны) Например: .phone или #phone
+const selector = '.phone';
+
+
 // Телефоны по умолчанию
 const defaultPhones = [
     "+38(098) 745-26-16",
@@ -43,4 +47,4 @@ const thirdPhones = [
     ""
 ]
 
-export { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones};
+export { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones, selector};

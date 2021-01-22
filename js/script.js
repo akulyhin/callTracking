@@ -1,7 +1,7 @@
-import { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones } from "./phoneNumber.js";
+import { defaultPhones, firstPhones, secondPhones, firstSource, secondSource, thirdSource, thirdPhones, selector } from "./settings.js";
 
 //Определяем блок по селектору для записи телефонов
-const phoneList = document.querySelector(".phone");
+const phoneList = document.querySelector(selector);
 
 // функция перебора массива телефонов и вставки в наш блок
 function changePhones(phones) {
