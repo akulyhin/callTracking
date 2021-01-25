@@ -1,0 +1,34 @@
+.phone-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 150px;
+}
+
+.down-arrow {
+  transition: all 0.3s;
+}
+
+.down-arrow::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/down-arrow.svg');
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+.phone-header:hover .down-arrow::after {
+  transform: rotate(180deg);
+}
+
+.phone-header__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.phone-header:hover .phone-header__list {
+  display: block;
+}
